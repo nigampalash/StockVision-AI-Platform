@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+sqlalchemy
+psycopg2-binary
+motor
+redis
+yfinance
+pandas
+numpy
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+websockets
+scikit-learn
