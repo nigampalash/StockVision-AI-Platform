@@ -28,19 +28,6 @@ export default function Home() {
           
           {/* Main Chart Area */}
           <div className="lg:col-span-2 glass rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-semibold flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-primary" />
-                Portfolio Performance
-              </h2>
-              <div className="flex gap-2">
-                {['1D', '1W', '1M', '1Y', 'ALL'].map((time) => (
-                  <button key={time} className={`px-3 py-1 rounded-md text-xs font-medium transition-colors ${time === '1M' ? 'bg-primary text-white' : 'text-muted-foreground hover:bg-black/5 dark:bg-white/5'}`}>
-                    {time}
-                  </button>
-                ))}
-              </div>
-            </div>
             <PortfolioChart />
           </div>
 
