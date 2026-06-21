@@ -1,10 +1,11 @@
 # 📈 StockVision AI Platform
 
-StockVision AI is a premium, modern, and highly responsive web application designed for next-generation stock market analysis and AI-driven portfolio management. It features a beautiful dark and light mode UI, real-time simulated market data, predictive alerts, and an intelligent auto-trading simulator.
+StockVision AI is a premium, modern, and highly responsive web application designed for next-generation stock market analysis and AI-driven portfolio management. It features a beautiful dark and light mode UI, real-time simulated market data, predictive alerts, interactive portfolio charting, and an intelligent auto-trading simulator.
 
-## ✨ Features
+## ✨ Features & Upgrades
 
-- **Dynamic Theme Engine:** Seamlessly toggle between a premium Dark Mode and a crisp Light Mode.
+- **Dynamic Theme Engine (Upgraded):** Seamlessly toggle between a premium Dark Mode and a crisp Light Mode. The entire UI automatically adapts its color palette, borders, and typography using `next-themes` and Tailwind v4 CSS variables.
+- **Interactive Portfolio Charting (New):** Beautiful, animated, and responsive area charts built with `Recharts`. Includes fully functional `1D / 1W / 1M / 1Y / ALL` time-range filtering that dynamically recalculates and animates realistic mock portfolio volatility.
 - **Real-time Market Dashboard:** Live tracking of major indices and popular stocks with interactive mock data.
 - **Portfolio Management:** Track your holdings, visualize asset allocation, and calculate total balance and daily returns.
 - **AI-Powered Alerts:** Setup custom condition-based alerts (e.g., price drops) and view AI recommendation triggers.
@@ -18,7 +19,7 @@ StockVision AI is a premium, modern, and highly responsive web application desig
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Theming:** `next-themes`
-- **Charts:** [Recharts](https://recharts.org/) & TradingView Widget integration
+- **Charts:** [Recharts](https://recharts.org/) (Dynamic SVG charts) & TradingView Widget integration
 
 ### Backend (API Engine)
 - **Framework:** [FastAPI](https://fastapi.tiangolo.com/) (Python)
@@ -72,7 +73,7 @@ StockVision-AI-Platform/
 │   └── requirements.txt    # Python dependencies
 └── frontend/               # Next.js web application
     ├── src/app/            # Application routes (Markets, Portfolio, Settings, etc.)
-    ├── src/components/     # Reusable React components (Sidebar, Topbar, Layout)
+    ├── src/components/     # Reusable React components (Sidebar, Topbar, Layout, Charts)
     ├── globals.css         # Tailwind v4 configuration and global themes
     └── package.json        # Node.js dependencies
 ```
