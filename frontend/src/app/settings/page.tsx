@@ -111,15 +111,24 @@ export default function SettingsPage() {
                 <h2 className="text-xl font-semibold mb-4">Appearance Settings</h2>
                 <p className="text-muted-foreground">Customize the look and feel of your dashboard.</p>
                 <div className="mt-6 flex gap-4">
-                   <div className="p-4 border border-primary bg-primary/10 rounded-lg cursor-pointer text-center w-32">
+                   <div 
+                     onClick={() => setTheme('dark')}
+                     className={`p-4 border rounded-lg cursor-pointer text-center w-32 transition-colors ${theme === 'dark' ? 'border-primary bg-primary/10' : 'border-white/10 bg-white/5 hover:bg-white/10'}`}
+                   >
                      <div className="w-10 h-10 bg-[#0a0f1c] rounded-full mx-auto mb-2 border border-white/20"></div>
                      <span className="text-sm font-medium">Dark Mode</span>
                    </div>
-                   <div className="p-4 border border-white/10 bg-white/5 rounded-lg cursor-not-allowed opacity-50 text-center w-32">
+                   <div 
+                     onClick={() => setTheme('light')}
+                     className={`p-4 border rounded-lg cursor-pointer text-center w-32 transition-colors ${theme === 'light' ? 'border-primary bg-primary/10' : 'border-white/10 bg-white/5 hover:bg-white/10'}`}
+                   >
                      <div className="w-10 h-10 bg-white rounded-full mx-auto mb-2 border border-gray-300"></div>
                      <span className="text-sm font-medium">Light Mode</span>
                    </div>
                 </div>
+                {theme === 'light' && (
+                  <p className="text-sm text-yellow-500 mt-4">Note: Light mode is currently in beta. Full implementation coming soon.</p>
+                )}
               </div>
             )}
 
