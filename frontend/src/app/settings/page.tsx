@@ -50,10 +50,10 @@ export default function SettingsPage() {
                     <h3 className="font-medium">Risk Tolerance</h3>
                     <p className="text-sm text-muted-foreground">Set your investment risk profile for tailored recommendations.</p>
                   </div>
-                  <select className="bg-white/5 border border-white/10 rounded-lg p-2 text-white outline-none focus:border-primary">
-                    <option>Conservative</option>
-                    <option>Moderate</option>
-                    <option selected>Aggressive</option>
+                  <select defaultValue="Aggressive" className="bg-white/5 border border-white/10 rounded-lg p-2 text-white outline-none focus:border-primary">
+                    <option value="Conservative">Conservative</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Aggressive">Aggressive</option>
                   </select>
                 </div>
               </div>
