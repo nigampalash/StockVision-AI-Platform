@@ -1,5 +1,6 @@
 import DashboardLayout from '@/components/layout/DashboardLayout';
-import { ArrowUpRight, ArrowDownRight, TrendingUp } from 'lucide-react';
+import { ArrowUpRight, ArrowDownRight, TrendingUp, Activity, DollarSign, Bell } from 'lucide-react';
+import PortfolioChart from '@/components/charts/PortfolioChart';
 
 export default function Home() {
   return (
@@ -40,10 +41,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            {/* Placeholder for Chart */}
-            <div className="h-[300px] w-full flex items-center justify-center border border-dashed border-black/10 dark:border-white/10 rounded-xl bg-black/5 dark:bg-white/5">
-              <span className="text-muted-foreground text-sm">Interactive Chart Component</span>
-            </div>
+            <PortfolioChart />
           </div>
 
           {/* Side Panel (Trending / AI Recommendations) */}
