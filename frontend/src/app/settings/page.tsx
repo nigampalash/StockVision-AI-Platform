@@ -7,6 +7,7 @@ import { User, Lock, Bell, Palette } from 'lucide-react';
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState('Profile');
   const [autoTrading, setAutoTrading] = useState(false);
+  const [theme, setTheme] = useState('dark');
 
   return (
     <DashboardLayout>
