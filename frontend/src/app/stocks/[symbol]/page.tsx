@@ -4,7 +4,7 @@ import { ArrowUpRight, Activity, DollarSign, BarChart3, Clock } from 'lucide-rea
 
 const TradingViewChart = dynamic(
   () => import('@/components/charts/TradingViewChart').then((mod) => mod.TradingViewChart),
-  { ssr: false, loading: () => <div className="h-[400px] w-full animate-pulse bg-white/5 rounded-xl"></div> }
+  { ssr: false, loading: () => <div className="h-[400px] w-full animate-pulse bg-black/5 dark:bg-white/5 rounded-xl"></div> }
 );
 
 // In Next.js 15 app router, params for dynamic routes are a Promise.
@@ -51,7 +51,7 @@ export default async function StockDetailPage({ params }: { params: Promise<{ sy
               <h2 className="text-lg font-semibold">Price Chart</h2>
               <div className="flex gap-2">
                 {['1D', '1W', '1M', '1Y', 'ALL'].map((time) => (
-                  <button key={time} className={`px-3 py-1 rounded-md text-xs font-medium transition-colors ${time === '1M' ? 'bg-primary text-white' : 'text-muted-foreground hover:bg-white/5'}`}>
+                  <button key={time} className={`px-3 py-1 rounded-md text-xs font-medium transition-colors ${time === '1M' ? 'bg-primary text-white' : 'text-muted-foreground hover:bg-black/5 dark:bg-white/5'}`}>
                     {time}
                   </button>
                 ))}
@@ -78,7 +78,7 @@ export default async function StockDetailPage({ params }: { params: Promise<{ sy
                   <span className="text-muted-foreground">Confidence Score</span>
                   <span className="font-semibold text-chart-1">88%</span>
                 </div>
-                <div className="w-full bg-white/5 rounded-full h-2">
+                <div className="w-full bg-black/5 dark:bg-white/5 rounded-full h-2">
                   <div className="bg-gradient-to-r from-green-500 to-emerald-400 h-2 rounded-full" style={{ width: '88%' }}></div>
                 </div>
                 <div className="flex justify-between text-sm pt-2">
@@ -108,7 +108,7 @@ export default async function StockDetailPage({ params }: { params: Promise<{ sy
 
 function StatBox({ icon, label, value }: { icon: React.ReactNode, label: string, value: string }) {
   return (
-    <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+    <div className="p-3 bg-black/5 dark:bg-white/5 rounded-xl border border-black/5 dark:border-white/5">
       <div className="flex items-center gap-2 text-muted-foreground mb-1">
         {icon}
         <span className="text-xs">{label}</span>

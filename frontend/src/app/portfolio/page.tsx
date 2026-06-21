@@ -28,13 +28,13 @@ export default function PortfolioPage() {
         </div>
 
         <div className="glass rounded-2xl overflow-hidden mt-8">
-          <div className="p-6 border-b border-white/10 flex justify-between items-center">
+          <div className="p-6 border-b border-black/10 dark:border-white/10 flex justify-between items-center">
             <h2 className="text-xl font-semibold flex items-center gap-2"><PieChart className="w-5 h-5 text-primary" /> Current Holdings</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-white/5 text-sm font-medium text-muted-foreground border-b border-white/10">
+                <tr className="bg-black/5 dark:bg-white/5 text-sm font-medium text-muted-foreground border-b border-black/10 dark:border-white/10">
                   <th className="p-4">Asset</th>
                   <th className="p-4 text-right">Shares</th>
                   <th className="p-4 text-right">Avg. Price</th>
@@ -45,7 +45,7 @@ export default function PortfolioPage() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 {MOCK_HOLDINGS.map((holding) => (
-                  <tr key={holding.symbol} className="hover:bg-white/5 transition-colors">
+                  <tr key={holding.symbol} className="hover:bg-black/5 dark:bg-white/5 transition-colors">
                     <td className="p-4 font-semibold">{holding.symbol}</td>
                     <td className="p-4 text-right">{holding.shares}</td>
                     <td className="p-4 text-right text-muted-foreground">${holding.avgPrice.toFixed(2)}</td>
@@ -71,7 +71,7 @@ function StatCard({ icon, label, value, change, positive }: { icon: any, label: 
   return (
     <div className="glass p-6 rounded-2xl flex flex-col gap-4">
       <div className="flex items-center gap-3 text-muted-foreground">
-        <div className="p-2 bg-white/5 rounded-lg text-primary">{icon}</div>
+        <div className="p-2 bg-black/5 dark:bg-white/5 rounded-lg text-primary">{icon}</div>
         <span className="font-medium">{label}</span>
       </div>
       <div>

@@ -23,12 +23,12 @@ export default function AlertsPage() {
         </div>
 
         <div className="glass rounded-2xl overflow-hidden">
-          <div className="p-6 border-b border-white/10 flex justify-between items-center">
+          <div className="p-6 border-b border-black/10 dark:border-white/10 flex justify-between items-center">
             <h2 className="text-xl font-semibold flex items-center gap-2"><BellRing className="w-5 h-5 text-primary" /> Active Alerts</h2>
           </div>
           <div className="divide-y divide-white/5">
             {MOCK_ALERTS.map((alert) => (
-              <div key={alert.id} className="p-6 flex items-center justify-between hover:bg-white/5 transition-colors">
+              <div key={alert.id} className="p-6 flex items-center justify-between hover:bg-black/5 dark:bg-white/5 transition-colors">
                 <div className="flex items-center gap-4">
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center ${alert.status === 'Active' ? 'bg-primary/20 text-primary' : 'bg-chart-4/20 text-chart-4'}`}>
                     <Bell className="w-5 h-5" />
@@ -45,7 +45,7 @@ export default function AlertsPage() {
                     {alert.status}
                   </span>
                   <div className="flex gap-2">
-                    <button className="p-2 text-muted-foreground hover:text-white hover:bg-white/10 rounded-md transition-colors">
+                    <button className="p-2 text-muted-foreground hover:text-white hover:bg-black/10 dark:bg-white/10 rounded-md transition-colors">
                       <Settings2 className="w-4 h-4" />
                     </button>
                     <button className="p-2 text-muted-foreground hover:text-red-500 hover:bg-red-500/10 rounded-md transition-colors">

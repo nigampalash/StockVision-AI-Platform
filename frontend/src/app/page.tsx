@@ -34,14 +34,14 @@ export default function Home() {
               </h2>
               <div className="flex gap-2">
                 {['1D', '1W', '1M', '1Y', 'ALL'].map((time) => (
-                  <button key={time} className={`px-3 py-1 rounded-md text-xs font-medium transition-colors ${time === '1M' ? 'bg-primary text-white' : 'text-muted-foreground hover:bg-white/5'}`}>
+                  <button key={time} className={`px-3 py-1 rounded-md text-xs font-medium transition-colors ${time === '1M' ? 'bg-primary text-white' : 'text-muted-foreground hover:bg-black/5 dark:bg-white/5'}`}>
                     {time}
                   </button>
                 ))}
               </div>
             </div>
             {/* Placeholder for Chart */}
-            <div className="h-[300px] w-full flex items-center justify-center border border-dashed border-white/10 rounded-xl bg-white/5">
+            <div className="h-[300px] w-full flex items-center justify-center border border-dashed border-black/10 dark:border-white/10 rounded-xl bg-black/5 dark:bg-white/5">
               <span className="text-muted-foreground text-sm">Interactive Chart Component</span>
             </div>
           </div>
@@ -84,7 +84,7 @@ function StockPick({ symbol, name, action, confidence }: { symbol: string, name:
   };
 
   return (
-    <div className="flex items-center justify-between p-3 rounded-xl hover:bg-white/5 transition-colors cursor-pointer border border-transparent hover:border-white/5">
+    <div className="flex items-center justify-between p-3 rounded-xl hover:bg-black/5 dark:bg-white/5 transition-colors cursor-pointer border border-transparent hover:border-black/5 dark:border-white/5">
       <div>
         <div className="font-bold text-foreground">{symbol}</div>
         <div className="text-xs text-muted-foreground">{name}</div>

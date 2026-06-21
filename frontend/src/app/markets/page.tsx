@@ -24,10 +24,10 @@ export default function MarketsPage() {
               <input 
                 type="text" 
                 placeholder="Search markets..." 
-                className="pl-10 pr-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm focus:outline-none focus:border-primary w-full md:w-64"
+                className="pl-10 pr-4 py-2 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg text-sm focus:outline-none focus:border-primary w-full md:w-64"
               />
             </div>
-            <button className="p-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
+            <button className="p-2 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg hover:bg-black/10 dark:bg-white/10 transition-colors">
               <Filter className="w-4 h-4" />
             </button>
           </div>
@@ -37,7 +37,7 @@ export default function MarketsPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-white/10 bg-white/5 text-sm font-medium text-muted-foreground">
+                <tr className="border-b border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-sm font-medium text-muted-foreground">
                   <th className="p-4">Symbol</th>
                   <th className="p-4">Company</th>
                   <th className="p-4 text-right">Price</th>
@@ -48,7 +48,7 @@ export default function MarketsPage() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 {MOCK_STOCKS.map((stock) => (
-                  <tr key={stock.symbol} className="hover:bg-white/5 transition-colors group cursor-pointer">
+                  <tr key={stock.symbol} className="hover:bg-black/5 dark:bg-white/5 transition-colors group cursor-pointer">
                     <td className="p-4 font-semibold text-primary">{stock.symbol}</td>
                     <td className="p-4 text-muted-foreground">{stock.name}</td>
                     <td className="p-4 text-right font-medium">${stock.price.toFixed(2)}</td>
